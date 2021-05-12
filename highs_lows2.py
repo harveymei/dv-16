@@ -42,9 +42,16 @@ with open(filename) as f:
 fig = plt.figure(dpi=128, figsize=(10, 6))
 # plt.plot(highs, c='red')  # 红色显示最高气温
 # 添加日期数据
-plt.plot(dates, highs, c='red')
+# plt.plot(dates, highs, c='red')
 # 绘制最低温度
-plt.plot(dates, lows, c='blue')
+# plt.plot(dates, lows, c='blue')
+# 指定颜色透明度
+# Alpha值为0表示完全透明，1（默认设置）表示完全不透明。
+plt.plot(dates, highs, c='red', alpha=0.5)
+plt.plot(dates, lows, c='blue', alpha=0.5)
+# 填充颜色
+# 使用方法fill_between()，它接受一个x值系列和两个y值系列，并填充两个y值系列之间的空间
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # 设置图形格式
 # plt.title("Daily high temperatures, July 2014", fontsize=24)
