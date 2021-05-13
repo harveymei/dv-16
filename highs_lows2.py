@@ -32,7 +32,7 @@ with open(filename) as f:
             high = int(row[1])
             low = int(row[3])
         except ValueError:
-            print(current_date, 'missing data')
+            print(current_date, 'missing data')  # 打印一条错误消息，指出缺失数据的日期
         else:
             dates.append(current_date)
             # highs.append(row[1])  # 将列表中的第一列值依次写入highs列表
