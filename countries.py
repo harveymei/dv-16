@@ -6,6 +6,7 @@
 # @IDE     : PyCharm
 # @GitHub  : https://github.com/harveymei/
 
+# from pygal.i18n import COUNTRIES  # 已移除，不可用
 from pygal_maps_world.i18n import COUNTRIES
 
 for country_code in sorted(COUNTRIES.keys()):
